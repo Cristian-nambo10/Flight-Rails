@@ -18,8 +18,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_19_141420) do
     t.string "name"
     t.string "image_url"
     t.string "slug"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", percision: 6, null: false
+    t.datetime "updated_at", percision: 6, null: false
   end
 
   create_table "reviews", force: :cascade do |t|
@@ -27,8 +27,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_19_141420) do
     t.string "description"
     t.integer "score"
     t.bigint "airline_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", percision: 6, null: false
+    t.datetime "updated_at", percision: 6, null: false
     t.index ["airline_id"], name: "index_reviews_on_airline_id"
   end
 
